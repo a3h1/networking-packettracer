@@ -1,0 +1,37 @@
+I have set up an enterprise network
+Seperate routers for each department
+all connected to single router which is connected to ISP
+
+I set default gteway address alone 
+
+Now I'm going to enable ssh for all switches
+ACC-Switch : password: 1234
+#username abcd password 1234
+VLAN: 14 - Accounts
+
+IT-Switch : password: 1234
+#username abcd password 1234
+
+RAD-Switch : password: 1234
+#username abcd password 1234
+
+MAR-Switch : password: 1234
+#username abcd password 1234
+
+PRO-Switch : password: 1234
+#username abcd password 1234
+
+Now have to enable DHCP for auto configuration of IP addresses 
+
+
+
+
+Main-Router(config-if)#no srv
+Main-Router(config-if)#no se
+Main-Router(config-if)#exit
+Main-Router(config)#ip dhcp exclud
+Main-Router(config)#ip dhcp excluded-address 192.168.10.1 192.168.10.10
+Main-Router(config)#ip dhcp excluded-address 192.168.20.1 192.168.20.10
+Main-Router(config)#ip dhcp excluded-address 192.168.30.1 192.168.30.10
+Main-Router(config)#ip dhcp excluded-address 192.168.40.1 192.168.40.10
+Main-Router(config)#ip dhcp excluded-address 192.168.50.1 192.168.50.10
